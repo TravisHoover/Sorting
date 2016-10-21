@@ -1,12 +1,24 @@
 #include "algorithm.h"
 
+void swap(DataType& x, DataType& y)
+// ---------------------------------------------------
+// Swaps two items.
+// Precondition: x and y are the items to be swapped.
+// Postcondition: Contents of actual locations that x 
+// and y represent are swapped.
+// ---------------------------------------------------
+{
+	DataType temp = x;
+	x = y;
+	y = temp;
+}  // end swap
+
 void bubbleSort(DataType theArray[], int n)
 {
 	// Must define DataType before compilation
 
-	typedef type - of - array - item DataType;
+	typedef int DataType;
 
-	void bubbleSort(DataType theArray[], int n)
 		// ---------------------------------------------------
 		// Sorts the items in an array into ascending order.
 		// Precondition: theArray is an array of n items.
@@ -36,34 +48,10 @@ void bubbleSort(DataType theArray[], int n)
 			   // theArray[n-pass]
 		}  // end for
 	}  // end bubbleSort
+};
 
-	void swap(DataType& x, DataType& y)
-		// ---------------------------------------------------
-		// Swaps two items.
-		// Precondition: x and y are the items to be swapped.
-		// Postcondition: Contents of actual locations that x 
-		// and y represent are swapped.
-		// ---------------------------------------------------
-	{
-		DataType temp = x;
-		x = y;
-		y = temp;
-	}  // end swap
-}
-
-void insertionSort(DataType theArray[], int n)
+void insertionSort(DataType theArray[], DataType n)
 {
-	// Must define DataType before compilation
-
-	typedef type - of - array - item DataType;
-
-	void insertionSort(DataType theArray[], int n)
-		// ---------------------------------------------------
-		// Sorts the items in an array into ascending order.
-		// Precondition: theArray is an array of n items.
-		// Postcondition: theArray is sorted into ascending
-		// order; n is unchanged.
-		// ---------------------------------------------------
 	{
 		// unsorted = first index of the unsorted region, 
 		// loc = index of insertion in the sorted region, 
@@ -90,20 +78,24 @@ void insertionSort(DataType theArray[], int n)
 				// shift theArray[loc-1] to the right
 				theArray[loc] = theArray[loc - 1];
 
-			// Assertion: theArray[loc] is where nextItem 
-			// belongs
-
 			// insert nextItem into Sorted region
 			theArray[loc] = nextItem;
 		}  // end for
 	}  // end insertionSort
 }
-
+/*
 void mergesort(DataType theArray[], int first, int last)
 {
 	// Must define DataType and MAX_SIZE before compilation
 
-	typedef type - of - array - item DataType;
+	typedef  DataType;
+
+	const int MAX_SIZE = 10;
+
+	void merge(DataType theArray[],
+		// Must define DataType and MAX_SIZE before compilation
+
+		typedef type - of - array - item DataType;
 
 	const int MAX_SIZE = maximum - number - of - items - in - array;
 
@@ -186,13 +178,10 @@ void mergesort(DataType theArray[], int first, int last)
 		}  // end if
 	}  // end mergesort
 }
-
+*/
+/*
 void quicksort(DataType theArray[], int first, int last)
 {
-	// Must define DataType before compilation
-
-	typedef type - of - array - item DataType;
-
 	void choosePivot(DataType theArray[], int first, int last);
 	// ---------------------------------------------------------
 	// Chooses a pivot for quicksort’s partition algorithm and 
@@ -265,17 +254,7 @@ void quicksort(DataType theArray[], int first, int last)
 			quicksort(theArray, pivotIndex + 1, last);
 		}  // end if
 	}  // end quicksort
-
-	void swap(DataType& x, DataType& y)
-		// ---------------------------------------------------
-		// Swaps two items.
-		// Precondition: x and y are the items to be swapped.
-		// Postcondition: Contents of actual locations that x 
-		// and y represent are swapped.
-		// ---------------------------------------------------
-	{
-		DataType temp = x;
-		x = y;
-		y = temp;
-	}  // end swap
 }
+*/
+
+
