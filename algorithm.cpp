@@ -50,7 +50,7 @@ void bubbleSort(DataType theArray[], int n)
 	}  // end bubbleSort
 };
 
-void insertionSort(DataType theArray[], DataType n)
+void insertionSort(DataType theArray[], int n)
 {
 	{
 		// unsorted = first index of the unsorted region, 
@@ -83,8 +83,8 @@ void insertionSort(DataType theArray[], DataType n)
 		}  // end for
 	}  // end insertionSort
 }
-/*
-void mergesort(DataType theArray[], int first, int last)
+
+/*void mergesort(DataType theArray[], int first, int last)
 {
 	// Must define DataType and MAX_SIZE before compilation
 
@@ -177,8 +177,8 @@ void mergesort(DataType theArray[], int first, int last)
 			merge(theArray, first, mid, last);
 		}  // end if
 	}  // end mergesort
-}
-*/
+}*/
+
 /*
 void quicksort(DataType theArray[], int first, int last)
 {

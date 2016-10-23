@@ -16,8 +16,8 @@ int main() {
 	int *data;
 	data = new int[arraySize];		//create base array to work with*/
 
-	int arraySize = 100;
-	int data[100];
+	int arraySize = 5000;
+	int data[5000];
 
 	//randomize data[] to be used in first set of data
 	srand((unsigned)time(0));				//seed randomizer
@@ -30,21 +30,21 @@ int main() {
 	cout << "Array Size\t" << "Bubble\t" << "Insertion\t" << "Merge\t" << "Quick" << endl;
 	cout << "**********\t" << "******\t" << "*********\t" << "*****\t" << "******" << endl;
 	
-	cout << "    10    \t" << randomTime(data, 10, "bubble") << "\t" << randomTime(data, 10, "insertion") << endl;
-	cout << "    50    \t" << randomTime(data, 50, "bubble") << "\t" << randomTime(data, 50, "insertion") << endl;
-	cout << "    100   \t" << randomTime(data, 100, "bubble") << "\t" << randomTime(data, 100, "insertion") << endl;
-	/*cout << "    200   \t" << randomTime(data, 200, "bubble") << "\t" << randomTime(data, 200, "insertion") << endl;
-	cout << "    300   \t" << randomTime(data, 300, "bubble") << "\t" << randomTime(data, 300, "insertion") << endl;
-	cout << "    400   \t" << randomTime(data, 400, "bubble") << "\t" << randomTime(data, 400, "insertion") << endl;
-	cout << "    500   \t" << randomTime(data, 500, "bubble") << "\t" << randomTime(data, 500, "insertion") << endl;
-	cout << "    1000  \t" << randomTime(data, 1000, "bubble") << "\t" << randomTime(data, 1000, "insertion") << endl;
-	cout << "    2000  \t" << randomTime(data, 2000, "bubble") << "\t" << randomTime(data, 2000, "insertion") << endl;
-	cout << "    3000  \t" << randomTime(data, 3000, "bubble") << "\t" << randomTime(data, 3000, "insertion") << endl;
-	cout << "    4000  \t" << randomTime(data, 4000, "bubble") << "\t" << randomTime(data, 4000, "insertion") << endl;
-	cout << "    5000  \t" << randomTime(data, 5000, "bubble") << "\t" << randomTime(data, 5000, "insertion") << endl;
-	cout << "    10000 \t" << randomTime(data, 10000, "bubble") << "\t" << randomTime(data, 10000, "insertion") << endl;
-	cout << "    50000 \t" << randomTime(data, 50000, "bubble") << "\t" << randomTime(data, 50000, "insertion") << endl;
-	//cout << "    100000\t" << randomTime(data, 100000, "bubble") << "\t" << randomTime(data, 100000, "insertion") << endl;*/
+	cout << "    10    \t" << randomTime(data, 10, "bubble") << "\t" << randomTime(data, 10, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    50    \t" << randomTime(data, 50, "bubble") << "\t" << randomTime(data, 50, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    100   \t" << randomTime(data, 100, "bubble") << "\t" << randomTime(data, 100, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    200   \t" << randomTime(data, 200, "bubble") << "\t" << randomTime(data, 200, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    300   \t" << randomTime(data, 300, "bubble") << "\t" << randomTime(data, 300, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    400   \t" << randomTime(data, 400, "bubble") << "\t" << randomTime(data, 400, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    500   \t" << randomTime(data, 500, "bubble") << "\t" << randomTime(data, 500, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    1000  \t" << randomTime(data, 1000, "bubble") << "\t" << randomTime(data, 1000, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    2000  \t" << randomTime(data, 2000, "bubble") << "\t" << randomTime(data, 2000, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    3000  \t" << randomTime(data, 3000, "bubble") << "\t" << randomTime(data, 3000, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    4000  \t" << randomTime(data, 4000, "bubble") << "\t" << randomTime(data, 4000, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	cout << "    5000  \t" << randomTime(data, 5000, "bubble") << "\t" << randomTime(data, 5000, "insertion") << "\t\t" << randomTime(data, 10, "merge") << endl;
+	/*cout << "    10000 \t" << randomTime(data, 10000, "bubble") << "\t" << randomTime(data, 10000, "insertion") << endl;
+	//cout << "    50000 \t" << randomTime(data, 50000, "bubble") << "\t" << randomTime(data, 50000, "insertion") << endl;
+	//cout << "    100000\t" << randomTime(data, 100000, "bubble") << "\t" << randomTime(data, 100000, "insertion") << endl;
 	cout << endl;
 
 	//Sort array for next set of data
@@ -66,8 +66,8 @@ int main() {
 	cout << "    3000  \t" << sortedTime(3000, "bubble") << "\t" << sortedTime(3000, "insertion") << endl;
 	cout << "    4000  \t" << sortedTime(4000, "bubble") << "\t" << sortedTime(4000, "insertion") << endl;
 	cout << "    5000  \t" << sortedTime(5000, "bubble") << "\t" << sortedTime(5000, "insertion") << endl;
-	cout << "    10000 \t" << sortedTime(10000, "bubble") << "\t" << sortedTime(10000, "insertion") << endl;
-	cout << "    50000 \t" << sortedTime(50000, "bubble") << "\t" << sortedTime(50000, "insertion") << endl;
+	//cout << "    10000 \t" << sortedTime(10000, "bubble") << "\t" << sortedTime(10000, "insertion") << endl;
+	//cout << "    50000 \t" << sortedTime(50000, "bubble") << "\t" << sortedTime(50000, "insertion") << endl;
 	//cout << "    100000\t" << sortedTime(100000, "bubble") << "\t" << sortedTime(100000, "insertion") << endl;
 	cout << endl;
 
@@ -89,11 +89,11 @@ int main() {
 	cout << "    3000  \t" << invertSortedTime(3000, "bubble") << "\t" << invertSortedTime(3000, "insertion") << endl;
 	cout << "    4000  \t" << invertSortedTime(4000, "bubble") << "\t" << invertSortedTime(4000, "insertion") << endl;
 	cout << "    5000  \t" << invertSortedTime(5000, "bubble") << "\t" << invertSortedTime(5000, "insertion") << endl;
-	cout << "    10000 \t" << invertSortedTime(10000, "bubble") << "\t" << invertSortedTime(10000, "insertion") << endl;
-	cout << "    50000 \t" << invertSortedTime(50000, "bubble") << "\t" << invertSortedTime(50000, "insertion") << endl;
-	//cout << "    100000\t" << invertSortedTime(100000, "bubble") << "\t" << invertSortedTime(100000, "insertion") << endl;
+	//cout << "    10000 \t" << invertSortedTime(10000, "bubble") << "\t" << invertSortedTime(10000, "insertion") << endl;
+	//cout << "    50000 \t" << invertSortedTime(50000, "bubble") << "\t" << invertSortedTime(50000, "insertion") << endl;
+	//cout << "    100000\t" << invertSortedTime(100000, "bubble") << "\t" << invertSortedTime(100000, "insertion") << endl;*/
 
-	delete[] data;
+	//delete[] data;
 	return 0;
 }
 
