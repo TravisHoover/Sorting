@@ -257,4 +257,39 @@ void quicksort(DataType theArray[], int first, int last)
 }
 */
 
+void reverseBubbleSort(DataType theArray[], int n)
+{
+	// Must define DataType before compilation
 
+	typedef int DataType;
+
+	// ---------------------------------------------------
+	// Sorts the items in an array into ascending order.
+	// Precondition: theArray is an array of n items.
+	// Postcondition: theArray is sorted into ascending
+	// order; n is unchanged.
+	// Calls: swap.
+	// ---------------------------------------------------
+	{
+		bool sorted = false;  // false when swaps occur
+
+		for (int pass = 1; (pass < n) && !sorted; ++pass)
+		{  // Invariant: theArray[n+1-pass..n-1] is sorted
+		   //            and > theArray[0..n-pass]
+			sorted = true;  // assume sorted
+			for (int index = 0; index < n - pass; ++index)
+			{  // Invariant: theArray[0..index-1] <= 
+			   // theArray[index]
+				int nextIndex = index + 1;
+				if (theArray[index] < theArray[nextIndex])
+				{  // exchange items
+					swap(theArray[index], theArray[nextIndex]);
+					sorted = false;  // signal exchange
+				}  // end if
+			}  // end for
+
+			   // Assertion: theArray[0..n-pass-1] < 
+			   // theArray[n-pass]
+		}  // end for
+	}  // end bubbleSort
+};
